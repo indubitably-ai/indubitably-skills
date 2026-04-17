@@ -29,7 +29,13 @@ The discovery cues below are intentionally literal so simple text search works w
 | `codebase-archaeologist` | [`codebase-archaeologist/SKILL.md`](./codebase-archaeologist/SKILL.md) | Systematic exploration of unfamiliar or legacy codebases | `onboarding`, `what does this do`, `legacy code`, `architecture` | `references/`, `SELF-TEST.md` |
 | `command-guard` | [`command-guard/SKILL.md`](./command-guard/SKILL.md) | Handling blocked destructive commands and agent safety guardrails | `blocked command`, `git reset --hard`, `rm -rf`, `safety guardrails` | `references/`, `scripts/`, `SELF-TEST.md` |
 | `de-slopify` | [`de-slopify/SKILL.md`](./de-slopify/SKILL.md) | Removing AI-sounding writing patterns from docs and public text | `README polish`, `AI slop`, `docs tone`, `public-facing text` | `references/` |
+| `mobile-ios-design` | [`mobile-ios-design/SKILL.md`](./mobile-ios-design/SKILL.md) | Native iOS design and SwiftUI implementation guided by Apple platform conventions | `iOS`, `SwiftUI`, `Apple HIG`, `iPhone`, `iPad` | `references/` |
+| `modes-of-reasoning-project-analysis` | [`modes-of-reasoning-project-analysis/SKILL.md`](./modes-of-reasoning-project-analysis/SKILL.md) | Multi-perspective project analysis through distinct reasoning modes and agent synthesis | `modes of reasoning`, `multi-perspective analysis`, `epistemological review`, `agent swarm` | `references/` |
+| `multi-pass-bug-hunting` | [`multi-pass-bug-hunting/SKILL.md`](./multi-pass-bug-hunting/SKILL.md) | Iterative audit-fix-rescan workflows for deep bug hunting and release hardening | `find all bugs`, `deep audit`, `code review`, `pre-release hardening` | `references/` |
+| `planning-workflow` | [`planning-workflow/SKILL.md`](./planning-workflow/SKILL.md) | Detailed markdown-first planning before implementation begins | `new project`, `implementation plan`, `architecture plan`, `beads` | `references/` |
+| `readme-writing` | [`readme-writing/SKILL.md`](./readme-writing/SKILL.md) | Writing and revising README files for open source projects | `README`, `project documentation`, `badges`, `GitHub README` | `references/`, `skill.spec.json` |
 | `software-optimization` | [`software-optimization/SKILL.md`](./software-optimization/SKILL.md) | Profile-driven performance work with behavior proofs | `optimize`, `slow`, `bottleneck`, `latency`, `throughput`, `p95` | `references/` |
+| `tui-glamorous` | [`tui-glamorous/SKILL.md`](./tui-glamorous/SKILL.md) | Building polished terminal UIs with Charmbracelet tools and production TUI patterns | `Bubble Tea`, `Lip Gloss`, `Gum`, `Go TUI`, `terminal UI` | `references/` |
 | `ui-polish` | [`ui-polish/SKILL.md`](./ui-polish/SKILL.md) | Iterative UI/UX refinement for already-functional interfaces | `polish UI`, `world-class`, `desktop`, `mobile`, `visual refinement` | `references/` |
 
 ## Repository Contract
@@ -41,12 +47,14 @@ The repository follows a simple layout so agents can discover skills without gue
 - `SKILL.md` starts with YAML frontmatter containing `name` and `description`.
 - Optional supporting material stays inside the same skill directory.
 - Relative links inside a skill should resolve within that skill directory.
+- Optional local metadata may live beside `SKILL.md`.
 
-Supporting files are used consistently:
+Supporting files are used consistently when present:
 
 - `references/` contains deeper documentation.
 - `scripts/` contains helper commands or validation tools.
 - `SELF-TEST.md` describes how to validate the skill.
+- `skill.spec.json` can hold extra skill metadata when needed.
 
 ## Quick Discovery Commands
 
@@ -133,6 +141,97 @@ What is inside:
 </details>
 
 <details>
+<summary><code>mobile-ios-design</code></summary>
+
+Purpose: design native-feeling iOS interfaces and implement them in SwiftUI using Apple platform conventions.
+
+Good fit:
+
+- SwiftUI view design and layout work
+- iPhone and iPad adaptation
+- Apple HIG alignment, navigation, symbols, and accessibility
+
+What is inside:
+
+- iOS-specific design guidance in `SKILL.md`
+- Reference material for HIG patterns, navigation, and SwiftUI components
+
+</details>
+
+<details>
+<summary><code>modes-of-reasoning-project-analysis</code></summary>
+
+Purpose: analyze a project through multiple reasoning modes, then synthesize the outputs into one report with explicit coverage and disagreement handling.
+
+Good fit:
+
+- Multi-perspective project reviews
+- Methodology or architecture analysis that needs more than one lens
+- Agent-swarm style analysis with structured synthesis
+
+What is inside:
+
+- A lead-agent workflow for mode selection, dispatch, monitoring, and synthesis
+- Reference material for taxonomy axes, mode composition, prompts, operations, and reporting
+
+</details>
+
+<details>
+<summary><code>multi-pass-bug-hunting</code></summary>
+
+Purpose: run repeated audit-fix-rescan cycles so bug hunting does not stop at the first obvious issue.
+
+Good fit:
+
+- "Find all bugs" requests
+- Deep code audits before release
+- Review passes where one fix may expose the next issue
+
+What is inside:
+
+- A multi-pass workflow for scanning, fixing, rescanning, and verification
+- Reference material for patterns, tools, and triage
+
+</details>
+
+<details>
+<summary><code>planning-workflow</code></summary>
+
+Purpose: produce detailed markdown plans before implementation so downstream execution is clearer and cheaper.
+
+Good fit:
+
+- New project setup
+- Architecture planning before coding
+- Breaking large builds into dependency-aware tasks
+
+What is inside:
+
+- A plan-first workflow in `SKILL.md`
+- Supporting prompts, examples, and FAQ material in `references/`
+
+</details>
+
+<details>
+<summary><code>readme-writing</code></summary>
+
+Purpose: write or overhaul README files so they work as both onboarding docs and project-facing landing pages.
+
+Good fit:
+
+- Creating a new README from scratch
+- Revising an existing project README
+- README structure, badges, examples, and documentation polish
+
+What is inside:
+
+- A README-focused writing workflow in `SKILL.md`
+- Reference material for templates, badges, examples, prompts, and quick guidance
+- Optional `skill.spec.json` metadata
+
+</details>
+
+<details>
 <summary><code>software-optimization</code></summary>
 
 Purpose: optimize software by measuring first, proving behavior stayed the same, and changing one lever at a time.
@@ -147,6 +246,24 @@ What is inside:
 
 - A profile-first optimization loop
 - Technique catalogs and language-specific references
+
+</details>
+
+<details>
+<summary><code>tui-glamorous</code></summary>
+
+Purpose: build more polished terminal interfaces with Charmbracelet tools, from shell-script prompts to full Go TUIs.
+
+Good fit:
+
+- Bubble Tea and Lip Gloss work
+- Gum-based shell prompts and spinners
+- Production TUI patterns, layouts, async rendering, and SSH-served TUIs
+
+What is inside:
+
+- A routing guide for Gum, Bubble Tea, Lip Gloss, and related tooling
+- Reference material for components, production architecture, infrastructure, and patterns
 
 </details>
 
@@ -180,3 +297,4 @@ To keep this repository discoverable, new skills should follow the same pattern:
 2. Add a `SKILL.md` entrypoint with `name` and `description` frontmatter.
 3. Keep deeper documentation in local `references/`.
 4. Add `scripts/` and `SELF-TEST.md` when the skill needs executable helpers or validation.
+5. Update this `README.md` so the skill stays discoverable from the repository root.
