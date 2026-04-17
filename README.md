@@ -28,6 +28,10 @@ The discovery cues below are intentionally literal so simple text search works w
 | `agent-session-history` | [`agent-session-history/SKILL.md`](./agent-session-history/SKILL.md) | Mining past agent sessions for prompts, decisions, and repeated working patterns | `what did I ask`, `find that prompt`, `history`, `session archaeology` | `references/`, `scripts/`, `SELF-TEST.md` |
 | `command-guard` | [`command-guard/SKILL.md`](./command-guard/SKILL.md) | Handling blocked destructive commands and agent safety guardrails | `blocked command`, `git reset --hard`, `rm -rf`, `safety guardrails` | `references/`, `scripts/`, `SELF-TEST.md` |
 | `de-slopify` | [`de-slopify/SKILL.md`](./de-slopify/SKILL.md) | Removing AI-sounding writing patterns from docs and public text | `README polish`, `AI slop`, `docs tone`, `public-facing text` | `references/` |
+| `mobile-ios-design` | [`mobile-ios-design/SKILL.md`](./mobile-ios-design/SKILL.md) | Native iOS design and SwiftUI implementation guided by Apple platform conventions | `iOS`, `SwiftUI`, `Apple HIG`, `iPhone`, `iPad` | `references/` |
+| `planning-workflow` | [`planning-workflow/SKILL.md`](./planning-workflow/SKILL.md) | Detailed markdown-first planning before implementation begins | `new project`, `implementation plan`, `architecture plan`, `beads` | `references/` |
+| `readme-writing` | [`readme-writing/SKILL.md`](./readme-writing/SKILL.md) | Writing and revising README files for open source projects | `README`, `project documentation`, `badges`, `GitHub README` | `references/`, `skill.spec.json` |
+| `tui-glamorous` | [`tui-glamorous/SKILL.md`](./tui-glamorous/SKILL.md) | Building polished terminal UIs with Charmbracelet tools and production TUI patterns | `Bubble Tea`, `Lip Gloss`, `Gum`, `Go TUI`, `terminal UI` | `references/` |
 
 ## Repository Contract
 
@@ -38,12 +42,14 @@ The repository follows a simple layout so agents can discover skills without gue
 - `SKILL.md` starts with YAML frontmatter containing `name` and `description`.
 - Optional supporting material stays inside the same skill directory.
 - Relative links inside a skill should resolve within that skill directory.
+- Optional local metadata may live beside `SKILL.md`.
 
-Supporting files are used consistently:
+Supporting files are used consistently when present:
 
 - `references/` contains deeper documentation.
 - `scripts/` contains helper commands or validation tools.
 - `SELF-TEST.md` describes how to validate the skill.
+- `skill.spec.json` can hold extra skill metadata when needed.
 
 ## Quick Discovery Commands
 
@@ -110,6 +116,79 @@ What is inside:
 
 </details>
 
+<details>
+<summary><code>mobile-ios-design</code></summary>
+
+Purpose: design native-feeling iOS interfaces and implement them in SwiftUI using Apple platform conventions.
+
+Good fit:
+
+- SwiftUI view design and layout work
+- iPhone and iPad adaptation
+- Apple HIG alignment, navigation, symbols, and accessibility
+
+What is inside:
+
+- iOS-specific design guidance in `SKILL.md`
+- Reference material for HIG patterns, navigation, and SwiftUI components
+
+</details>
+
+<details>
+<summary><code>planning-workflow</code></summary>
+
+Purpose: produce detailed markdown plans before implementation so downstream execution is clearer and cheaper.
+
+Good fit:
+
+- New project setup
+- Architecture planning before coding
+- Breaking large builds into dependency-aware tasks
+
+What is inside:
+
+- A plan-first workflow in `SKILL.md`
+- Supporting prompts, examples, and FAQ material in `references/`
+
+</details>
+
+<details>
+<summary><code>readme-writing</code></summary>
+
+Purpose: write or overhaul README files so they work as both onboarding docs and project-facing landing pages.
+
+Good fit:
+
+- Creating a new README from scratch
+- Revising an existing project README
+- README structure, badges, examples, and documentation polish
+
+What is inside:
+
+- A README-focused writing workflow in `SKILL.md`
+- Reference material for templates, badges, examples, prompts, and quick guidance
+- Optional `skill.spec.json` metadata
+
+</details>
+
+<details>
+<summary><code>tui-glamorous</code></summary>
+
+Purpose: build more polished terminal interfaces with Charmbracelet tools, from shell-script prompts to full Go TUIs.
+
+Good fit:
+
+- Bubble Tea and Lip Gloss work
+- Gum-based shell prompts and spinners
+- Production TUI patterns, layouts, async rendering, and SSH-served TUIs
+
+What is inside:
+
+- A routing guide for Gum, Bubble Tea, Lip Gloss, and related tooling
+- Reference material for components, production architecture, infrastructure, and patterns
+
+</details>
+
 ## Using These Skills
 
 If your agent runtime supports local skills, copy or symlink the skill directories you want into its skill search path and preserve the directory structure. The internal relative paths matter because `SKILL.md` files reference local `references/`, `scripts/`, and `SELF-TEST.md` files.
@@ -122,3 +201,4 @@ To keep this repository discoverable, new skills should follow the same pattern:
 2. Add a `SKILL.md` entrypoint with `name` and `description` frontmatter.
 3. Keep deeper documentation in local `references/`.
 4. Add `scripts/` and `SELF-TEST.md` when the skill needs executable helpers or validation.
+5. Update this `README.md` so the skill stays discoverable from the repository root.
