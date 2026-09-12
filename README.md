@@ -29,6 +29,7 @@ The discovery cues below are intentionally literal so simple text search works w
 | `codebase-archaeologist` | [`codebase-archaeologist/SKILL.md`](./codebase-archaeologist/SKILL.md) | Systematic exploration of unfamiliar or legacy codebases | `onboarding`, `what does this do`, `legacy code`, `architecture` | `references/`, `SELF-TEST.md` |
 | `command-guard` | [`command-guard/SKILL.md`](./command-guard/SKILL.md) | Handling blocked destructive commands and agent safety guardrails | `blocked command`, `git reset --hard`, `rm -rf`, `safety guardrails` | `references/`, `scripts/`, `SELF-TEST.md` |
 | `de-slopify` | [`de-slopify/SKILL.md`](./de-slopify/SKILL.md) | Removing AI-sounding writing patterns from docs and public text | `README polish`, `AI slop`, `docs tone`, `public-facing text` | `references/` |
+| `functional-programming` | [`functional-programming/SKILL.md`](./functional-programming/SKILL.md) | Functional design, refactoring, and review distilled from the Mostly Adequate Guide | `pure functions`, `immutability`, `currying`, `composition`, `functors`, `monads`, `Mostly Adequate` | `references/`, `agents/`, `SELF-TEST.md`, `LICENSE.md` |
 | `mobile-ios-design` | [`mobile-ios-design/SKILL.md`](./mobile-ios-design/SKILL.md) | Native iOS design and SwiftUI implementation guided by Apple platform conventions | `iOS`, `SwiftUI`, `Apple HIG`, `iPhone`, `iPad` | `references/` |
 | `modes-of-reasoning-project-analysis` | [`modes-of-reasoning-project-analysis/SKILL.md`](./modes-of-reasoning-project-analysis/SKILL.md) | Multi-perspective project analysis through distinct reasoning modes and agent synthesis | `modes of reasoning`, `multi-perspective analysis`, `epistemological review`, `agent swarm` | `references/` |
 | `multi-pass-bug-hunting` | [`multi-pass-bug-hunting/SKILL.md`](./multi-pass-bug-hunting/SKILL.md) | Iterative audit-fix-rescan workflows for deep bug hunting and release hardening | `find all bugs`, `deep audit`, `code review`, `pre-release hardening` | `references/` |
@@ -137,6 +138,26 @@ What is inside:
 
 - A direct editing workflow
 - Pattern guidance in `references/`
+
+</details>
+
+<details>
+<summary><code>functional-programming</code></summary>
+
+Purpose: apply functional programming to real code while preserving observable behavior, distilled from Professor Frisby's Mostly Adequate Guide to Functional Programming.
+
+Good fit:
+
+- Extracting pure calculations and making effects explicit
+- Composition, currying, Option/Result, and functional code reviews
+- Choosing between map, chain, applicative combination, traversal, and folds
+
+What is inside:
+
+- A practical workflow and operation-selection table in `SKILL.md`
+- Focused references covering the guide's 13 chapters, with a pinned source revision
+- Acceptance scenarios and optional Codex UI metadata
+- Attribution and a skill-specific [CC BY-SA 4.0 license notice](./functional-programming/LICENSE.md)
 
 </details>
 
