@@ -1,0 +1,31 @@
+{
+  "name": "functional-programming",
+  "version": "1.0.0",
+  "description": "Apply functional programming to JavaScript and TypeScript with behavior-preserving refactors, explicit effects, and type-guided explanations.",
+  "author": {
+    "name": "Indubitably",
+    "url": "https://github.com/indubitably-ai"
+  },
+  "homepage": "https://github.com/indubitably-ai/indubitably-skills/tree/master/plugins/functional-programming",
+  "repository": "https://github.com/indubitably-ai/indubitably-skills",
+  "license": "CC-BY-SA-4.0",
+  "keywords": ["functional-programming", "javascript", "typescript", "refactoring", "composition", "mostly-adequate"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Indubitably FP",
+    "shortDescription": "Practical functional refactors",
+    "longDescription": "Design, refactor, review, and explain functional code, especially JavaScript and TypeScript. Extract pure calculations, preserve caller-owned data, make effects explicit, and choose between map, chain, applicative combination, traversal, and folds using the actual types and behavior. Includes focused guidance on callback arity, falsey values, error accumulation, Promise timing, and algebraic laws.\n\nThe workflow follows your project's existing libraries and conventions. It does not require a new FP framework. It provides instructions and examples; code execution and repository access depend on the tools available in your ChatGPT or Codex session.\n\nIndependently adapted from Professor Frisby's Mostly Adequate Guide to Functional Programming by the Mostly Adequate Core Team and contributors, with attribution and CC BY-SA 4.0 licensing. No endorsement by the original authors is implied.",
+    "developerName": "Indubitably",
+    "category": "Developer Tools",
+    "capabilities": [],
+    "websiteURL": "https://github.com/indubitably-ai/indubitably-skills/tree/master/plugins/functional-programming",
+    "defaultPrompt": [
+      "Refactor this function into a pure calculation and an explicit effect boundary.",
+      "Review this JavaScript for mutation, callback, and error-handling pitfalls.",
+      "Explain when to use map, chain, or traverse with a small TypeScript example."
+    ],
+    "brandColor": "#1D746B",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png"
+  }
+}
