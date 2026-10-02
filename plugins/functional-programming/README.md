@@ -1,14 +1,14 @@
-# Indubitably FP
+# Functional Programming
 
 A functional-programming plugin for ChatGPT and Codex, built from the repository's [functional-programming skill](https://github.com/indubitably-ai/indubitably-skills/tree/master/functional-programming).
 
-Use it to refactor code into pure calculations with explicit effect boundaries, review JavaScript and TypeScript for functional-design pitfalls, or explain composition and algebraic data types through concrete examples. It follows the project's existing tools and conventions. Repository access and code execution depend on the host session's available tools.
+Learn and apply functional programming in JavaScript and TypeScript: refactor code into pure functions, review mutation and side effects, and understand composition and algebraic data types through concrete examples. It follows the project's existing tools and conventions. Repository access and code execution depend on the host session's available tools.
 
 Try:
 
-- “Refactor this function into a pure calculation and an explicit effect boundary.”
-- “Review this JavaScript for mutation, callback, and error-handling pitfalls.”
-- “Explain when to use map, chain, or traverse with a small TypeScript example.”
+- “Refactor this JavaScript into pure functions without changing its behavior.”
+- “Review this TypeScript for mutation, side effects, and error-handling pitfalls.”
+- “Teach me map versus flatMap with a small JavaScript example.”
 
 ## Package
 
@@ -24,7 +24,7 @@ From the repository root, with Python 3.10 or later:
 python3 plugins/functional-programming/build.py
 ```
 
-This creates `dist/functional-programming-1.0.1.zip` and its SHA-256 checksum. Use `--output-dir <directory>` to change the destination. The builder requires only the Python standard library and includes an explicit file list so unrelated repository files are excluded. Add new skill resources to `SKILL_FILES` when needed.
+This creates `dist/functional-programming-1.0.2.zip` and its SHA-256 checksum. Use `--output-dir <directory>` to change the destination. The builder requires only the Python standard library and includes an explicit file list so unrelated repository files are excluded. Add new skill resources to `SKILL_FILES` when needed.
 
 Edit the version and listing metadata in `.codex-plugin/plugin.json` before a new release. The portable manifest is generated from that same metadata. Extract the ZIP into a directory named `functional-programming` for local plugin validation or installation; the source folder here is a package template, not a complete installed plugin.
 

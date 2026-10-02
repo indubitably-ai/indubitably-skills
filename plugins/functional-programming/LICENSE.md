@@ -1,6 +1,6 @@
 # License and attribution
 
-Indubitably FP's package metadata, icons, documentation, build script, and bundled functional-programming skill are licensed under [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
+Functional Programming's package metadata, icons, documentation, build script, and bundled functional-programming skill are licensed under [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
 
 The skill adapts *Professor Frisby's Mostly Adequate Guide to Functional Programming*, by the Mostly Adequate Core Team and contributors. It condenses and reorganizes the guide and adds examples and implementation guidance. The package retains the skill's original license notice and detailed attribution in `skills/functional-programming/LICENSE.md` and `skills/functional-programming/references/SOURCES.md`.
 
