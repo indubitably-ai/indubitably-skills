@@ -24,7 +24,7 @@ From the repository root, with Python 3.10 or later:
 python3 plugins/functional-programming/build.py
 ```
 
-This creates `dist/functional-programming-1.0.0.zip` and its SHA-256 checksum. Use `--output-dir <directory>` to change the destination. The builder requires only the Python standard library and includes an explicit file list so unrelated repository files are excluded. Add new skill resources to `SKILL_FILES` when needed.
+This creates `dist/functional-programming-1.0.1.zip` and its SHA-256 checksum. Use `--output-dir <directory>` to change the destination. The builder requires only the Python standard library and includes an explicit file list so unrelated repository files are excluded. Add new skill resources to `SKILL_FILES` when needed.
 
 Edit the version and listing metadata in `.codex-plugin/plugin.json` before a new release. The portable manifest is generated from that same metadata. Extract the ZIP into a directory named `functional-programming` for local plugin validation or installation; the source folder here is a package template, not a complete installed plugin.
 
@@ -33,6 +33,10 @@ Edit the version and listing metadata in `.codex-plugin/plugin.json` before a ne
 Downloadable packages are published under this repository's [GitHub Releases](https://github.com/indubitably-ai/indubitably-skills/releases). A GitHub release makes the package available to download; availability in the shared ChatGPT and Codex directory is established separately through OpenAI's review process.
 
 Upload the ZIP to the [OpenAI Plugins dashboard](https://platform.openai.com/plugins) using the intended verified developer identity. Resolve its automated findings, submit the draft for review, and publish the approved version. See the [official submission instructions](https://developers.openai.com/plugins/deploy/submission) for current requirements. Local and personal marketplaces are useful for authoring and testing but do not publish a plugin to the public directory.
+
+## Privacy and support
+
+See the [privacy policy](PRIVACY.md) for the plugin's data handling. For questions or bug reports, use the repository's [issue tracker](https://github.com/indubitably-ai/indubitably-skills/issues).
 
 ## Attribution and license
 

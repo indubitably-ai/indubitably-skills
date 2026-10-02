@@ -30,6 +30,7 @@ PACKAGE_FILES = (
     "assets/logo.png",
     "assets/logo.svg",
     "LICENSE.md",
+    "PRIVACY.md",
     "README.md",
 )
 
