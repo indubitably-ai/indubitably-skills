@@ -312,7 +312,7 @@ If your agent runtime supports local skills, copy or symlink the skill directori
 
 ## Plugin Releases
 
-[Indubitably FP](./plugins/functional-programming/README.md) packages the functional-programming skill for ChatGPT and Codex. Download its ZIP from [GitHub Releases](https://github.com/indubitably-ai/indubitably-skills/releases), or build it from the canonical skill using the package instructions. Public ChatGPT and Codex directory listings go through OpenAI's separate review and publication process.
+[Functional Programming](./plugins/functional-programming/README.md) packages the functional-programming skill for ChatGPT and Codex. Download its ZIP from [GitHub Releases](https://github.com/indubitably-ai/indubitably-skills/releases), or build it from the canonical skill using the package instructions. Public ChatGPT and Codex directory listings go through OpenAI's separate review and publication process.
 
 ## Adding New Skills
 

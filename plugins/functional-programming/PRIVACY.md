@@ -1,8 +1,8 @@
-# Indubitably FP Privacy Policy
+# Functional Programming Privacy Policy
 
 Effective date: October 1, 2026.
 
-Indubitably FP is an open-source functional-programming plugin published by Gregory George Pazo and maintained in the [Indubitably skills repository](https://github.com/indubitably-ai/indubitably-skills). This policy describes the plugin package and its support channel.
+Functional Programming is an open-source functional-programming plugin published by Gregory George Pazo and maintained in the [Indubitably skills repository](https://github.com/indubitably-ai/indubitably-skills). This policy describes the plugin package and its support channel.
 
 ## Plugin data handling
 
